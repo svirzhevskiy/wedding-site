@@ -229,10 +229,38 @@ footer {
     
     .hero {
         flex-direction: column;
-        margin-bottom: 150px;
+        margin-bottom: 180px;
+        position: relative;
+        padding-bottom: 50px;
     }
     
-    .hero-image, .hero-text {
+    .hero-image {
+        width: 100%;
+        order: 1;
+        margin-bottom: 20px;
+    }
+    
+    .hero-image img {
+        max-width: 100%;
+        margin-left: 0;
+        margin-top: -30px;
+    }
+    
+    .hero-text {
+        width: 100%;
+        order: 2;
+    }
+    
+    .text-container {
+        margin-top: 20px;
+        margin-bottom: 30px;
+        width: 100%;
+    }
+    
+    .photo-container {
+        order: 3;
+        margin-top: 30px;
+        position: relative;
         width: 100%;
     }
     
@@ -241,11 +269,59 @@ footer {
     }
     
     .invitation-text {
-        left: 50%;
-        bottom: -100px;
+        position: relative;
+        right: auto;
+        bottom: auto;
+        order: 4;
+        margin-top: 40px;
+        left: auto;
+        width: 100%;
     }
     
     .invitation-text p {
-        font-size: 72px;
+        font-size: 64px;
+    }
+    
+    .photo-small {
+        position: absolute;
+        width: 45%;
+        left: 40px;
+        top: 0%;
+        z-index: 2;
+    }
+    
+    .photo-big {
+        width: 70%;
+        margin-left: 20%;
+        position: relative;
+        z-index: 1;
+        margin-top: 30%;
+    }
+}
+
+/* Mobile - small screens */
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 48px;
+    }
+    
+    .hero-text h2 {
+        font-size: 20px;
+    }
+    
+    .invitation-text p {
+        font-size: 48px;
+    }
+    
+    .photo-small {
+        width: 40%;
+        left: 5%;
+        top: 15%;
+    }
+    
+    .photo-big {
+        width: 75%;
+        margin-left: 15%;
+        margin-top: 12%;
     }
 } 
