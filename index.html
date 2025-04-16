@@ -32,6 +32,149 @@
                 </div>
             </div>
         </section>
+        
+        <section class="lemon-section">
+            <div class="lemon-image">
+                <img src="assets/lemon-branch-second.png" alt="Lemon branch decoration">
+            </div>
+        </section>
+        
+        <section class="location-section">
+            <div class="location-heading">
+                <h2>Место Свадьбы</h2>
+            </div>
+            
+            <div class="location-photos">
+                <div class="location-photo location-photo-1">
+                    <img src="assets/location-1.png" alt="Wedding location 1">
+                </div>
+                <div class="location-photo location-photo-2">
+                    <img src="assets/location-2.png" alt="Wedding location 2">
+                </div>
+                <div class="location-photo location-photo-3">
+                    <img src="assets/location-3.png" alt="Wedding location 3">
+                </div>
+                <div class="location-photo location-photo-4">
+                    <img src="assets/location-4.png" alt="Wedding location 4">
+                </div>
+            </div>
+            
+            <!-- Mobile carousel (only visible on mobile) -->
+            <div class="mobile-carousel">
+                <div class="carousel-container">
+                    <button class="carousel-prev">&#10094;</button>
+                    <div class="carousel-track">
+                        <div class="carousel-slide">
+                            <img src="assets/location-1.png" alt="Wedding location 1">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/location-2.png" alt="Wedding location 2">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/location-3.png" alt="Wedding location 3">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/location-4.png" alt="Wedding location 4">
+                        </div>
+                    </div>
+                    <button class="carousel-next">&#10095;</button>
+                </div>
+            </div>
+            
+            <div class="location-description">
+                <p>Наша свадьба пройдет в агроусадьбе "Богач".</p>
+                <p>Усадьба находится на трассе М1 Е30 в районе города Кобрина в культурно-историческом месте.</p>
+                <p>При хорошей погоде наша свадьба пройдет на улице. Поэтому для вашего комфорта советуем взять с собой головные уборы и отказаться от обуви на высоком, тонком каблуке.</p>
+            </div>
+            
+            <div class="map-link">
+                <a href="https://yandex.by/maps/org/agrousadba_khutor_bogach/146764401135/?ll=24.346030%2C52.181241&z=19.56" target="_blank">Посмотреть локацию на карте</a>
+            </div>
+            
+            <div class="location-end-image">
+                <img src="assets/location-end.png" alt="Location end" class="desktop-image">
+                <img src="assets/location-end-mobile.png" alt="Location end" class="mobile-image">
+            </div>
+        </section>
     </main>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile carousel functionality
+            const slides = Array.from(document.querySelectorAll('.carousel-slide'));
+            const prevButton = document.querySelector('.carousel-prev');
+            const nextButton = document.querySelector('.carousel-next');
+            
+            let currentSlide = 0;
+            const totalSlides = slides.length;
+            
+            // Initialize all slides to be visible but with different top one
+            function initCarousel() {
+                // Make all slides visible
+                slides.forEach(slide => {
+                    slide.classList.add('visible');
+                });
+                
+                // Set initial top slide
+                updateTopSlide();
+            }
+            
+            // Update which slide is on top
+            function updateTopSlide() {
+                // Remove top class from all slides
+                slides.forEach(slide => {
+                    slide.classList.remove('top');
+                });
+                
+                // Add top class to current slide
+                slides[currentSlide].classList.add('top');
+            }
+            
+            // Navigate to previous slide (with cycling)
+            function goToPrevSlide() {
+                currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                updateTopSlide();
+            }
+            
+            // Navigate to next slide (with cycling)
+            function goToNextSlide() {
+                currentSlide = (currentSlide + 1) % totalSlides;
+                updateTopSlide();
+            }
+            
+            // Click events for navigation
+            prevButton.addEventListener('click', goToPrevSlide);
+            nextButton.addEventListener('click', goToNextSlide);
+            
+            // Swipe functionality
+            let touchStartX = 0;
+            let touchEndX = 0;
+            
+            const container = document.querySelector('.carousel-container');
+            
+            container.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+            });
+            
+            container.addEventListener('touchend', (e) => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            });
+            
+            function handleSwipe() {
+                const swipeThreshold = 50;
+                if (touchEndX < touchStartX - swipeThreshold) {
+                    // Swipe left (next)
+                    goToNextSlide();
+                } else if (touchEndX > touchStartX + swipeThreshold) {
+                    // Swipe right (prev)
+                    goToPrevSlide();
+                }
+            }
+            
+            // Initialize
+            initCarousel();
+        });
+    </script>
 </body>
 </html> 
