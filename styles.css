@@ -118,7 +118,6 @@ section {
     height: auto;
     object-fit: contain;
     margin-left: -150px;
-    margin-top: -45px;
 }
 
 .invitation-text {
@@ -270,6 +269,7 @@ footer {
     width: 100%;
     margin: 0 auto;
     padding-top: 30px;
+    padding-left: 20px;
     margin-bottom: 0;
     height: 600px;
 }
@@ -532,12 +532,13 @@ footer {
     .hero-image img {
         max-width: 100%;
         margin-left: 0;
-        margin-top: -30px;
+        margin-top: -15px;
     }
     
     .hero-text {
         width: 100%;
         order: 2;
+        padding: 0px;
     }
     
     .text-container {
@@ -626,6 +627,7 @@ footer {
         display: none; /* Hide regular photos on mobile */
         height: auto;
         margin-bottom: 0;
+        padding-left: 0px;
     }
     
     .mobile-carousel {
@@ -789,5 +791,10 @@ footer {
 
     .dress-code-text h3 {
         font-size: 48px;
-    }    
+    }
+    
+    .dress-code-heading h2 {
+        font-size: 64px;
+    }
+    
 }
