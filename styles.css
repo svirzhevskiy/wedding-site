@@ -240,7 +240,7 @@ footer {
 
 /* Location Section */
 .location-section {
-    padding: 80px 0 160px;
+    padding: 80px 0 80px;
     text-align: center;
     position: relative;
     width: 100%;
@@ -490,11 +490,11 @@ footer {
 }
 
 .carousel-prev {
-    left: 10px;
+    left: 0%;
 }
 
 .carousel-next {
-    right: 10px;
+    left: 95%;
 }
 
 /* Remove unused carousel dots styles */
@@ -601,7 +601,7 @@ footer {
     }
     
     .location-section {
-        padding: 60px 0 100px;
+        padding: 60px 0 0px;
     }
     
     .location-heading {
@@ -619,7 +619,7 @@ footer {
     }
     
     .location-description p {
-        font-size: 18px;
+        font-size: 14px;
     }
     
     .location-photos {
@@ -662,4 +662,132 @@ footer {
     .location-end-image {
         margin-top: 30px;
     }
+}
+
+/* Dress Code Section */
+.dress-code-section {
+    padding: 80px 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dress-code-heading {
+    width: 100%;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.dress-code-heading h2 {
+    font-family: 'Hello_January_script';
+    font-size: 64px;
+    font-weight: 400;
+    color: #FF9500;
+    margin-bottom: 0;
+    text-align: center;
+    position: relative;
+}
+
+.dress-code-description {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.dress-code-description p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Dress Code Examples */
+.dress-code-examples {
+    width: 90%;
+    margin: 80px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.dress-code-woman, .dress-code-man {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dress-code-image {
+    width: 45%;
+}
+
+.dress-code-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.dress-code-text {
+    width: 50%;
+    text-align: left;
+    padding: 0 20px;
+}
+
+.dress-code-text h3 {
+    font-family: 'Hello_January_script';
+    font-size: 128px;
+    font-weight: 400;
+    color: #FF9500;
+    margin-bottom: 30px;
+}
+
+.dress-code-text p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+/* Media Queries for Dress Code Examples */
+@media (max-width: 768px) {
+    .dress-code-examples {
+        width: 100%;
+        margin-top: 40px;
+        gap: 60px;
+    }
+    
+    .dress-code-woman, .dress-code-man {
+        flex-direction: column;
+    }
+    
+    .dress-code-image, .dress-code-text {
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    .dress-code-text {
+        text-align: center;
+        padding: 20px 0;
+    }
+    
+    .dress-code-text h3 {
+        font-size: 64px;
+        margin-bottom: 20px;
+    }
+    
+    .dress-code-text p {
+        font-size: 14px;
+    }
+
+    .dress-code-description p {
+        font-size: 14px;
+    }
+
+    .dress-code-text h3 {
+        font-size: 48px;
+    }    
 }
