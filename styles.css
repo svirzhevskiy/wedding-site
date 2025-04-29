@@ -994,3 +994,194 @@ footer {
         max-width: 160px;
     }
 }
+
+/* Gift Section */
+.gift-section {
+    background: linear-gradient(to bottom, #FFFFFF 0%, #F9B3CD4D 65%, #FFFFFF 100%);
+    padding: 80px 0;
+    width: 100%;
+}
+
+.gift-block-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.gift-start-text {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.pion-1-image {
+    position: relative;
+    width: 35%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.pion-1-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.gift-block-2 {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-areas: 
+        "pion3 text"
+        "pion3 pion2";
+    width: 100%;
+    margin-top: 80px;
+    position: relative;
+}
+
+.gift-main-text {
+    grid-area: text;
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.gift-main-text img {
+    max-width: 100%;
+    margin: 20px 0;
+}
+
+.pion-3-image {
+    grid-area: pion3;
+    align-self: center;
+    justify-self: start;
+    width: 100%;
+}
+
+.pion-3-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.pion-2-image {
+    grid-area: pion2;
+    justify-self: end;
+    width: 50%;
+    margin-top: 0; /* Remove space between text and image */
+}
+
+.pion-2-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.gift-section p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.gift-section h3 {
+    font-family: 'Hello_January_script';
+    font-size: 128px;
+    font-weight: 400;
+    color: #FF9500;
+    margin-bottom: 0;
+    text-align: center;
+    position: relative;
+}
+
+.gift-link {
+    font-family: 'Raleway', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: #333333;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.gift-link:hover {
+    color: #FF9500;
+}
+
+.gift-link:visited {
+    color: #999999;
+}
+
+@media (max-width: 768px) {
+    .gift-block-1 {
+        flex-direction: column;
+    }
+    
+    .gift-start-text {
+        width: 100%;
+        order: 1;
+        margin-bottom: 30px;
+    }
+    
+    .pion-1-image {
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: none;
+        width: 70%;
+        order: 2;
+        justify-content: flex-end;
+        align-self: flex-end;
+    }
+    
+    .pion-1-image img {
+        max-width: 100%;
+    }
+
+    .gift-block-2 {
+        display: flex;
+        flex-direction: column;
+        margin-top: 60px;
+    }
+    
+    .gift-main-text {
+        width: 100%;
+        padding: 20px;
+        order: 1;
+    }
+    
+    .pion-2-image {
+        width: 50%;
+        order: 2;
+        margin-top: 20px;
+        align-self: flex-end;
+    }
+    
+    .pion-3-image {
+        width: 60%;
+        order: 3;
+        margin-top: 20px;
+        align-self: flex-start;
+    }
+
+    .gift-section p {
+        font-size: 14px;
+    }
+    
+    .gift-section h3 {
+        font-size: 64px;
+    }
+    
+    .gift-link {
+        font-size: 14px;
+    }
+}
+
