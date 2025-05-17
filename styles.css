@@ -237,7 +237,6 @@ footer {
     position: relative;
     left: 0;
     width: 50%;
-    display: flex;
     align-items: center;
     justify-content: flex-start;
     margin-left: -15px;
@@ -365,7 +364,7 @@ footer {
 .map-link a {
     font-family: 'Raleway', sans-serif;
     font-size: 24px;
-    font-weight: 400;
+    font-weight: 500;
     color: #333333;
     text-decoration: underline;
     transition: color 0.3s ease;
@@ -613,11 +612,14 @@ footer {
     }
     
     .date-image img {
-        max-width: 200px;
+        max-width: 300px;
+    }
+
+    .date-image {
+        margin-bottom: 0px;
     }
     
     .lemon-image {
-        width: 100%;
         margin-left: 0;
     }
     
@@ -627,6 +629,7 @@ footer {
     
     .lemon-image .mobile-image {
         display: block;
+        min-width: 340px;
     }
     
     section {
@@ -651,7 +654,7 @@ footer {
     }
     
     .location-description {
-        width: 90%;
+        width: 75%;
         margin: 0 auto;
         padding-top: 0;
     }
@@ -825,10 +828,6 @@ footer {
     .dress-code-description p {
         font-size: 14px;
     }
-
-    .dress-code-text h3 {
-        font-size: 48px;
-    }
     
     .dress-code-heading h2 {
         font-size: 64px;
@@ -892,7 +891,6 @@ footer {
 
 .contact-phone {
     margin-top: 0;
-    font-family: 'Raleway', sans-serif;
     font-size: 24px;
     font-weight: 400;
     line-height: 1.6;
@@ -1058,7 +1056,7 @@ footer {
 }
 
 .gift-main-text img {
-    max-width: 100%;
+    max-width: 60%;
     margin: 20px 0;
 }
 
